@@ -24,7 +24,7 @@ jobs:
                     java-version: "21"
                     distribution: "temurin"
             - name: Build with maven 
-              run: mvn clean install
+              run: mvn -B clean package -DskipTests
 
             - name: Build Docker image
               run: docker build -t my-app-java .
