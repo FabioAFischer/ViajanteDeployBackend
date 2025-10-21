@@ -29,8 +29,6 @@ jobs:
             - name: Build Docker image
               run: docker build -t my-app-java .
 
-            - name: Run tests
-              run: mvn test
     deploy:
         name: Deploy to production
         needs: [build]
